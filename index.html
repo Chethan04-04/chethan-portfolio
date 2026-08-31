@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chethan S — UI/UX Designer</title>
+<meta name="description" content="Chethan S — UI/UX Designer and Developer portfolio.">
+<style>
+:root{--bg:#09090b;--card:#111114;--muted:#a1a1aa;--text:#fafafa;--line:#242429;--accent:#a78bfa;--accent2:#67e8f9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:10;background:rgba(9,9,11,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;letter-spacing:-.04em;font-size:20px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;color:#c4c4cc;font-size:14px}.navlinks a:hover{color:#fff}
+.hero{min-height:82vh;display:flex;align-items:center;padding:90px 0 70px;position:relative;overflow:hidden}
+.glow{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,.17),transparent 65%);right:-120px;top:40px;pointer-events:none}
+.kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:#d4d4d8;font-size:13px;background:#0e0e11}.dot{width:7px;height:7px;border-radius:50%;background:#86efac;box-shadow:0 0 12px #86efac}
+h1{font-size:clamp(54px,8vw,104px);line-height:.95;letter-spacing:-.075em;margin:26px 0 24px;max-width:900px}
+.gradient{background:linear-gradient(100deg,#fff 10%,#c4b5fd 48%,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:650px;color:var(--muted);font-size:19px;margin:0 0 34px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 18px;border-radius:12px;border:1px solid var(--line);font-weight:650;font-size:14px}.btn.primary{background:#fff;color:#09090b;border-color:#fff}.btn:hover{transform:translateY(-2px);transition:.2s}
+section{padding:88px 0;border-top:1px solid var(--line)}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:800}.sectionhead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.sectionhead h2{font-size:42px;letter-spacing:-.055em;line-height:1.05;margin:8px 0 0}.sectionhead p{color:var(--muted);max-width:500px;margin:0}
+.aboutgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:22px}.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px}.panel p{color:#c2c2c8}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{border:1px solid var(--line);border-radius:16px;padding:18px;background:#0d0d10}.fact b{display:block;font-size:13px;color:#fff}.fact span{color:var(--muted);font-size:13px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-5px);border-color:#3a3a45}.cover{height:220px;padding:22px;position:relative;overflow:hidden}.cover.one{background:linear-gradient(135deg,#312e81,#0f172a)}.cover.two{background:linear-gradient(135deg,#164e63,#082f49)}.cover.three{background:linear-gradient(135deg,#581c87,#1e1b4b)}
+.phone{position:absolute;width:150px;height:250px;background:#f8fafc;border:7px solid #18181b;border-radius:25px;right:25px;top:28px;box-shadow:0 18px 45px rgba(0,0,0,.35);transform:rotate(7deg)}.phone:before{content:"";position:absolute;left:12px;right:12px;top:32px;height:70px;border-radius:13px;background:linear-gradient(135deg,#ddd6fe,#67e8f9)}.phone:after{content:"";position:absolute;left:12px;right:12px;top:118px;height:90px;border-radius:13px;background:repeating-linear-gradient(#e4e4e7 0 10px,transparent 10px 18px)}
+.coverlabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;opacity:.85}.projectbody{padding:24px}.project h3{margin:0 0 7px;font-size:22px;letter-spacing:-.03em}.project p{color:var(--muted);font-size:14px;margin:0 0 17px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:999px;color:#c9c9d0}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:12px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:#dddde3}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:22px;background:var(--card);border:1px solid var(--line);border-radius:18px}.num{color:var(--accent);font-weight:800;font-size:12px}.step h3{margin:10px 0 5px}.step p{font-size:13px;color:var(--muted);margin:0}
+.contact{display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(135deg,#15151a,#0d0d10);border:1px solid var(--line);border-radius:26px;padding:42px}.contact h2{font-size:40px;letter-spacing:-.05em;margin:0 0 8px}.contact p{color:var(--muted);margin:0}
+footer{padding:30px 0 45px;color:#71717a;font-size:13px;display:flex;justify-content:space-between}
+.note{font-size:11px;color:#71717a;margin-top:14px}
+@media(max-width:800px){.navlinks{display:none}.hero{min-height:auto;padding:80px 0}.projects,.process,.aboutgrid{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:15px}.contact{display:block}.contact .buttons{margin-top:22px}h1{font-size:60px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navin"><a class="logo" href="#">C<span>.</span></a><div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="glow"></div><div class="wrap">
+<div class="kicker"><span class="dot"></span> Open to UI/UX opportunities</div>
+<h1>Designing digital experiences that feel <span class="gradient">simple.</span></h1>
+<p>Hi, I'm <b>Chethan S</b> — a UI/UX designer and developer focused on clean interfaces, thoughtful user journeys, and practical digital products.</p>
+<div class="buttons"><a class="btn primary" href="#work">Explore my work ↗</a><a class="btn" href="mailto:chethanchethan1852@gmail.com">Let's connect</a></div>
+</div></header>
+
+<section id="work"><div class="wrap">
+<div class="sectionhead"><div><div class="eyebrow">Selected work</div><h2>Concept projects</h2></div><p>Self-initiated UX/UI concepts created to explore product thinking, interface design, and user-centered problem solving.</p></div>
+<div class="projects">
+<article class="project"><div class="cover one"><div class="coverlabel">Finance · Mobile</div><div class="phone"></div></div><div class="projectbody"><h3>FinMate</h3><p>A simple personal-finance experience designed to make spending, budgets, and savings easier to understand.</p><div class="tags"><span class="tag">UX Research</span><span class="tag">UI Design</span><span class="tag">Prototype</span></div></div></article>
+<article class="project"><div class="cover two"><div class="coverlabel">Healthcare · Mobile</div><div class="phone"></div></div><div class="projectbody"><h3>MediCare</h3><p>A healthcare appointment concept focused on reducing friction from doctor discovery to booking.</p><div class="tags"><span class="tag">User Flow</span><span class="tag">Wireframes</span><span class="tag">UI System</span></div></div></article>
+<article class="project"><div class="cover three"><div class="coverlabel">Food · Web & Mobile</div><div class="phone"></div></div><div class="projectbody"><h3>Foodly</h3><p>A food-ordering concept exploring clear discovery, personalized recommendations, and a faster checkout.</p><div class="tags"><span class="tag">Interaction</span><span class="tag">Visual Design</span><span class="tag">Usability</span></div></div></article>
+</div>
+<p class="note">Portfolio concepts shown for design exploration; they are not presented as client or commercial work.</p>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="sectionhead"><div><div class="eyebrow">About</div><h2>A designer who thinks in systems.</h2></div></div>
+<div class="aboutgrid"><div class="panel"><p>I enjoy turning complex ideas into clear, intuitive interfaces. My approach combines user needs, visual hierarchy, interaction patterns, and implementation awareness so designs are both useful and buildable.</p><p>I'm currently looking for opportunities where I can learn from experienced teams, contribute to real products, and grow as a UI/UX professional.</p></div>
+<div class="facts"><div class="fact"><b>Education</b><span>B.E.</span></div><div class="fact"><b>Focus</b><span>UI / UX Design</span></div><div class="fact"><b>Tool</b><span>Figma</span></div><div class="fact"><b>Location</b><span>India</span></div></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap"><div class="eyebrow">Toolkit</div><h2 style="font-size:42px;letter-spacing:-.05em;margin:8px 0 28px">Skills & tools</h2><div class="skills"><span class="skill">Figma</span><span class="skill">UI Design</span><span class="skill">UX Design</span><span class="skill">Wireframing</span><span class="skill">Prototyping</span><span class="skill">User Flows</span><span class="skill">Design Systems</span><span class="skill">Responsive Design</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span></div></div></section>
+
+<section><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Process</div><h2>How I approach a problem</h2></div></div><div class="process"><div class="step"><div class="num">01 — DISCOVER</div><h3>Understand</h3><p>Clarify users, goals, constraints, and the problem worth solving.</p></div><div class="step"><div class="num">02 — DEFINE</div><h3>Frame</h3><p>Turn observations into a focused problem statement and user flow.</p></div><div class="step"><div class="num">03 — DESIGN</div><h3>Explore</h3><p>Sketch, wireframe, prototype, and establish a clear visual hierarchy.</p></div><div class="step"><div class="num">04 — ITERATE</div><h3>Improve</h3><p>Test assumptions, refine interactions, and polish the final experience.</p></div></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact"><div><div class="eyebrow">Get in touch</div><h2>Let's create something useful.</h2><p>I'm open to UI/UX trainee and entry-level opportunities.</p></div><div class="buttons"><a class="btn primary" href="mailto:chethanchethan1852@gmail.com">Email me</a><a class="btn" href="tel:+918553485663">Call</a></div></div></div></section>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%"><span>© 2026 Chethan S</span><span>UI/UX Designer</span></div></footer>
+</body>
+</html>
